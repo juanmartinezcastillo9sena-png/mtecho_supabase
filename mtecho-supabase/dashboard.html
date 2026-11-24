@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTecho – Inicio</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="oculto">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>MTecho</h2>
+      <a href="dashboard.html" class="activo">Inicio</a>
+      <a href="apartamentos.html" class="">Apartamentos</a>
+      <a href="contratos.html" class="">Contratos</a>
+      <a href="perfil.html" class="">Perfil</a>
+      <div class="usuario">
+        <strong data-user-nombre>Usuario</strong><br>
+        <span data-user-email></span><br><br>
+        <button id="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="contenido">
+      <div class="sup">Panel principal</div>
+      <h1>Hola, <span data-user-nombre>Usuario</span></h1>
+      <div class="tarjetas">
+        <div class="tarjeta"><small>Sesión</small><strong class="verde">Activa</strong><small>Autenticado con Supabase</small></div>
+        <div class="tarjeta"><small>Apartamentos</small><strong>3</strong><small>Registrados (ejemplo)</small></div>
+        <div class="tarjeta"><small>Contratos activos</small><strong>2</strong><small>Datos de ejemplo</small></div>
+      </div>
+      <div class="panel">
+        <h3>Bienvenido a MTecho</h3>
+        <p>Desde aquí administras el arriendo de apartamentos. Las páginas están protegidas: sin sesión vuelves al login.</p>
+        <ul>
+          <li>Consulta los <a href="apartamentos.html">apartamentos</a> disponibles y ocupados.</li>
+          <li>Revisa los <a href="contratos.html">contratos</a> y su valor.</li>
+          <li>Mira tus datos en <a href="perfil.html">Perfil</a>.</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config/config.js"></script>
+  <script src="app/models/supabaseClient.js"></script>
+  <script src="app/models/authModel.js"></script>
+  <script src="app/controllers/guardController.js"></script>
+</body>
+</html>

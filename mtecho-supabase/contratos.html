@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTecho – Contratos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="oculto">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>MTecho</h2>
+      <a href="dashboard.html" class="">Inicio</a>
+      <a href="apartamentos.html" class="">Apartamentos</a>
+      <a href="contratos.html" class="activo">Contratos</a>
+      <a href="perfil.html" class="">Perfil</a>
+      <div class="usuario">
+        <strong data-user-nombre>Usuario</strong><br>
+        <span data-user-email></span><br><br>
+        <button id="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="contenido">
+      <div class="sup">Módulo</div>
+      <h1>Contratos</h1>
+      <div class="panel">
+        <table>
+          <tr><th>ID contrato</th><th>Apartamento</th><th>Fecha inicio</th><th>Fecha terminación</th><th>Valor</th></tr>
+          <tr><td>1</td><td>Apto 202</td><td>2026-01-01</td><td>2026-12-31</td><td>$900.000</td></tr>
+          <tr><td>2</td><td>Apto 303</td><td>2026-03-01</td><td>2027-02-28</td><td>$1.100.000</td></tr>
+        </table>
+        <p><small>Datos de ejemplo. Más adelante se conectarán a tablas de Supabase.</small></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config/config.js"></script>
+  <script src="app/models/supabaseClient.js"></script>
+  <script src="app/models/authModel.js"></script>
+  <script src="app/controllers/guardController.js"></script>
+</body>
+</html>

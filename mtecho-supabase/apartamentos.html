@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTecho – Apartamentos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="oculto">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>MTecho</h2>
+      <a href="dashboard.html" class="">Inicio</a>
+      <a href="apartamentos.html" class="activo">Apartamentos</a>
+      <a href="contratos.html" class="">Contratos</a>
+      <a href="perfil.html" class="">Perfil</a>
+      <div class="usuario">
+        <strong data-user-nombre>Usuario</strong><br>
+        <span data-user-email></span><br><br>
+        <button id="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="contenido">
+      <div class="sup">Módulo</div>
+      <h1>Apartamentos</h1>
+      <div class="panel">
+        <table>
+          <tr><th>ID</th><th>Apartamento</th><th>Tipo de vivienda</th><th>Estado</th></tr>
+          <tr><td>1</td><td>Apto 101</td><td>Apartamento</td><td><span class="estado ok">Disponible</span></td></tr>
+          <tr><td>2</td><td>Apto 202</td><td>Apartaestudio</td><td><span class="estado no">Ocupado</span></td></tr>
+          <tr><td>3</td><td>Apto 303</td><td>Apartamento</td><td><span class="estado no">Ocupado</span></td></tr>
+        </table>
+        <p><small>Datos de ejemplo. Más adelante se conectarán a tablas de Supabase.</small></p>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config/config.js"></script>
+  <script src="app/models/supabaseClient.js"></script>
+  <script src="app/models/authModel.js"></script>
+  <script src="app/controllers/guardController.js"></script>
+</body>
+</html>

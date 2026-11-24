@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MTecho – Perfil</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="oculto">
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>MTecho</h2>
+      <a href="dashboard.html" class="">Inicio</a>
+      <a href="apartamentos.html" class="">Apartamentos</a>
+      <a href="contratos.html" class="">Contratos</a>
+      <a href="perfil.html" class="activo">Perfil</a>
+      <div class="usuario">
+        <strong data-user-nombre>Usuario</strong><br>
+        <span data-user-email></span><br><br>
+        <button id="btn-logout">Cerrar sesión</button>
+      </div>
+    </aside>
+    <main class="contenido">
+      <div class="sup">Cuenta</div>
+      <h1>Perfil</h1>
+      <div class="panel">
+        <table>
+          <tr><th>Nombre</th><td data-user-nombre></td></tr>
+          <tr><th>Correo</th><td data-user-email></td></tr>
+          <tr><th>ID de usuario</th><td data-user-id></td></tr>
+          <tr><th>Creado</th><td data-user-created></td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="config/config.js"></script>
+  <script src="app/models/supabaseClient.js"></script>
+  <script src="app/models/authModel.js"></script>
+  <script src="app/controllers/guardController.js"></script>
+</body>
+</html>
